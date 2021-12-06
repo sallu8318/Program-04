@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program 04</title>
+</head>
+
+<body>
+    <h1>This is swiping two number with Temporary variable</h1>
+    <h2 id="ans1"></h2>
+    <h3 id="ans2"></h3><br>
+    <h1>This is swiping two number without Temorary variable</h1>
+    <h2 id="ans3"></h2>
+    <h3 id="ans4"></h3>
+    <script>
+        // This is swipeing Two numbers with Temporary variable
+        var a = prompt("Please enter the first value", "");
+        var b = prompt("please enter the second vlue", "");
+        document.getElementById("ans1").innerHTML = `First Value ${a} Second value ${b}`
+        var temp;
+        temp = a,
+            a = b,
+            b = temp
+        document.getElementById("ans2").innerHTML = `After Swiping First Value ${a} Second value ${b}`
+
+        // This is swiping two number without Temorary variable
+        var c = prompt("Please enter the first value without Temporary", "");
+        var d = prompt("please enter the second vlue without Temporary", "");
+        document.getElementById("ans3").innerHTML = `First Value ${c} Second value ${d}`
+        var hmmm;
+        hmmm = parseInt(c) + parseInt(d),
+            c = hmmm - parseInt(c),
+            d = hmmm - parseInt(d)
+        document.getElementById("ans4").innerHTML = `After Swiping First Value ${c} Second value ${d}`
+    </script>
+</body>
+
+</html>
